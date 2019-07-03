@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Panels</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="assets\css\stylesheet.css">.
+</head>
+<body  onload="startTime()">
+    <div class="header">
+        <img src="assets\images\locomotive logo.jpg">
+        <h1><strong>Crazy Trains</strong></h1>
+        <h4>Our Trains Are Crazy Fast</h4>
+    </div>
+<br>
+<br>
+<div class="panel-box">
+  <div class="panel-heading"><h3>Current Arrival/Departure Schedule</h3></div>
+  <div class="panel-body"><h2>Current Time:<span id="txt"></span></h2>
+<!-- built with w3 schools -->
+  <table id="table">
+    <tr id="tableRow" ;>
+      <th  id="name"><h2 >Train Name</h2></th>
+      <th id="space">&nbsp;</th>
+      <th id="destination"><h2>Destination</h2></th>
+      <th id="space">&nbsp;</th>
+      <th id="freq"><h2>Frequency(hh:mm)</h2></th>
+      <th id="space">&nbsp;</th>
+      <th id="timeArv"><h2>Time of Arrival</h2></th>
+      <th id="space">&nbsp;</th>
+      <th id="timeLeft"><h2>Time Left</h2></th>
+    </tr>
+  </table>
+</div>
+</div>
+<br>
+<div class="addTrain">
+  <div class="panel-box">
+      <div class="panel-heading"><h3>Add Trains to Schedule</h3>
+      </div>
+      </div>
+      <div id="formBackground">
+      <form>
+          <div class="form-group">
+              <label for="Train Name">Train Name:</label>
+              <input type="Text" class="form-control" id="TrainName" placeholder="Train to El Dorado" name="destination city">
+            </div>
+            <div class="form-group">
+              <label for="destination">Destination:</label>
+              <input type="text" class="form-control" id="destination" placeholder="Denver, CO" name="destination">
+            </div>  
+             <div class="form-group">
+              <label for="firstTrainTime">First Train Time (HH:mm) military time:</label>
+              <input type="text" class="form-control" id="firstTrainTime" placeholder="00:00" name="firstTrainTime">
+            </div>
+              <div class="form-group">
+              <label for="timeTilArrival">Time Til Arrival (HH:mm) military time:</label>
+              <input type="text" class="form-control" id="timeTilArrival" placeholder="00:00" name="timeTilArrival">
+            </div>
+            <button id="submit" type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+
+
+          
+</div>
+
+<script src="assets\javascript\moment.js"></script>
+</body>
+</html>
