@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+  	<title>Train Scheduler</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Sigmar+One|Special+Elite" rel="stylesheet">
+		<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="assets\javascript\startTime.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body onload="startTime()">
+
+
+  
+    <div class="header">
+        <img src="assets\images\locomotive logo.jpg">
+        <h1><strong>Crazy Trains</strong></h1>
+        <h4>Our Trains Are Crazy Fast</h4>
+    </div>
+<br>
+<br>
+<div class="panel-box">
+  <div class="panel-heading"><h3>Current Arrival/Departure Schedule</h3></div>
+  <div class="panel-body"><h3>Current Time:<span id="txt"></span></h3>
+<!-- built with w3 schools -->
+  <table id="table">
+    <tr id="tableRow">
+      <th  id="name"><h4><strong>Train Name: &nbsp; &nbsp; &nbsp;</strong></h4></th>
+        <th id="destination"><h4><strong>&nbsp; Destination:</strong></h4></th>
+          <th id="frequency"><h4><strong>&nbsp;&nbsp;&nbsp;Frequency(HH:mm)</strong></h4></th>
+          <th id="futureArv"><h4><strong>&nbsp;Arrival(HH:mm)</strong></h4></th>
+       <th id="timeLeft"><h4><strong>&nbsp;Remaining(HH:mm)</strong></h4></th>
+    </tr>
+  </table>
+</div>
+</div>
+<br>
+<div class="addTrain">
+  <div class="panel-box">
+      <div class="panel-heading"><h3>Add Trains to Schedule</h3>
+      </div>
+      </div>
+      <div id="formBackground">
+      <form>
+          <div class="form-group">
+              <label for="text">Train Name:</label>
+              <input type="text" class="form-control" id="train-name"  placeholder="Train to El Dorado" name="trainName">
+            </div>
+            <div class="form-group">
+              <label for="text"> Destination:</label>
+              <input type="text" class="form-control" id="train-destination" placeholder="Denver, CO" name="trainDestination">
+            </div>  
+             <div class="form-group">
+              <label for="text">Frequency:(HH:mm) military time:</label>
+              <input type="text" class="form-control" id="train-frequency" placeholder="00:00" name="frequency">
+            </div>
+              <div class="form-group">
+              <label for="text">Time of Arrival" (HH:mm) military time:</label>
+              <input type="text" class="form-control" id="one-train" placeholder="00:00" name="timeOfArrival">
+            </div>
+              <button id="add-train-btn" id="submit" type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+
+
+          
+</div>
+
+<script src="assets/javascript/app.js" type="text/javascript"></script>
+</body>
+</html>
